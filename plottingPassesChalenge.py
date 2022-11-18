@@ -22,9 +22,9 @@ fig, ax = pitch.grid(grid_height=0.9, title_height=0.06, axis=False,
                      endnote_height=0.04, title_space=0, endnote_space=0)
 
 #setting Sweden passes filter
-#mask_sweden = (df.type_name == 'Pass') & (df.team_name == team2)
+mask_sweden = (df.type_name == 'Pass') & (df.team_name == team2)
 #getting Sweden passes from data frame
-#df_sweden = df.loc[mask_sweden, ['x', 'y', 'outcome_name', "player_name"]]
+df_sweden = df.loc[mask_sweden, ['x', 'y', 'outcome_name', "player_name"]]
 
 #drawing shots circles
 #pitch.scatter(df_sweden.x,df_sweden.y, alpha=1,s=500,color="blue",ax=ax['pitch'], edgecolors="black")
@@ -37,7 +37,7 @@ fig, ax = pitch.grid(grid_height=0.9, title_height=0.06, axis=False,
 #setting Caroline Seger passes filter
 mask_Seger = (df.type_name == 'Pass') & (df.player_name == 'Sara Caroline Seger')
 #getting Caroline Seger passes from data frame
-df_Seger = df.loc[mask_Seger, ['x', 'y', 'outcome_name', "player_name"]]
+#df_Seger = df.loc[mask_Seger, ['x', 'y', 'outcome_name', "player_name"]]
 #drawing shots circles
 #pitch.scatter(df_Seger.x,df_Seger.y, alpha=1,s=500,color="blue",ax=ax['pitch'], edgecolors="black")
 #seting plot title
